@@ -1,0 +1,73 @@
+<html>
+
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+    </head>
+
+    <body>
+        <form action="index.html">
+            <label>Name:</label>
+            <input name="name" type="text"> <br> <br>
+            <label>Age:</label>
+            <input name="age" type="number">  <br> <br>
+            <label>Password:</la>
+            <input name="password" type="password" required> <!-- required -> doldurulması zorunlu alan -->
+            <br> <br>
+            
+            <!-- select -> cinsiyet seçimi için kullanılabilir-->
+            <label>Cinsiyet</label>
+            <select name="gender">
+                <option>Kadın</option>
+                <option>Erkek</option>
+            </select>
+            <br> <br>
+            
+            <label>Çaldığınız enstrümanı seçin</label>
+            <select name="instrument" size = 2 multiple>
+                <!-- size -> listenin kaçlığı gösterileceği -->
+                <!-- multiple -> çoklu seçim -->
+                <option>gitar</option>
+                <option>flüt</option>
+                <option>bağlama</option>
+                <option>klarnet</option>
+            </select>
+            <br> <br>
+            
+            <label>Hakkınızda: </label>
+            <textarea name="bio" rows="5" cols="25"></textarea>
+            <br> <br>
+            
+            <button>Kaydet</button>
+            <!--buton da sabmit gibi çalışıyor-->
+            <br> <br>
+            
+            <input type="submit" value="Kaydet">  <!-- gönder butonu -->
+            <!--value -> submit'in içinde ne yazacağı -->  
+            <br><br>
+            
+            
+            <label>Tarayıcınızı Seçiniz: </label>
+            <input list="browsers" name="browser">
+            <!--datalist -> başka bir select yöntemi-->
+            <datalist id="browsers">
+                <option value="Chrome">
+                <option value="Internet Explorer"></option>
+                <option value="Yandex"></option>
+                <option value="FireFox"></option>
+                <option value="Opera"></option>
+                <option value="Microsoft Edge"></option>
+            </datalist>
+            <input type="submit">
+        </form>
+        <br><br>
+        <!-- Output mantığı -->
+         <form action="index.html" oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+            <input type="number" id="a" value="0">
+            <input type="number" id="b" value="0">
+            <output name="x" for="a b"></output>
+            <br><br>
+            <input type="submit">
+         </form>
+    </body>
+</html>
